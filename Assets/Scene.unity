@@ -285,7 +285,7 @@ Transform:
   m_GameObject: {fileID: 2025795232}
   m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 10, y: 1, z: 10}
+  m_LocalScale: {x: 30, y: 1, z: 20}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -307,12 +307,18 @@ MonoBehaviour:
   autoUpdate: 1
   groundColor: {r: 0.15040939, g: 0.3773585, b: 0.10145959, a: 1}
   oceanColor: {r: 0.28146136, g: 0.48001948, b: 0.5188679, a: 1}
-  mapWidth: 100
-  mapHeight: 100
+  beachColor: {r: 1, g: 0.90952665, b: 0.4669811, a: 0}
+  mountainColor: {r: 0.3490566, g: 0.3490566, b: 0.3490566, a: 0}
+  snowColor: {r: 1, g: 1, b: 1, a: 0}
+  mapWidth: 300
+  mapHeight: 200
   offset: {x: 0, y: 0}
-  noiseScale: 20
+  noiseScale: 40
   octaves: 5
-  persistence: 0.296
+  persistence: 0.29
   lacunarity: 3
   seed: 0
-  groundLimit: 0.652
+  beachLimit: 0.523
+  groundLimit: 0.56
+  mountainLimit: 0.718
+  snowLimit: 0.804
