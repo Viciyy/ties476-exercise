@@ -9,9 +9,12 @@ public class MapGenerator : MonoBehaviour
     public bool autoUpdate;
 
     // Variables for noise map colors.
-    public Color groundColor;
+    public Color deepOceanColor;
     public Color oceanColor;
+    public Color lowOceanColor;
     public Color beachColor;
+    public Color lightGroundColor;
+    public Color groundColor;
     public Color mountainColor;
     public Color snowColor;
 
@@ -31,7 +34,10 @@ public class MapGenerator : MonoBehaviour
     public int seed;
 
     // Range sliders for noise map values.
+    [Range(0, 1)] public float oceanLimit;
+    [Range(0, 1)] public float lowOceanLimit;
     [Range(0, 1)] public float beachLimit;
+    [Range(0, 1)] public float lightGroundLimit;
     [Range(0, 1)] public float groundLimit;
     [Range(0, 1)] public float mountainLimit;
     [Range(0, 1)] public float snowLimit;
@@ -85,10 +91,16 @@ public class MapGenerator : MonoBehaviour
                     colourMap[y * width + x] = mountainColor;
                 } else if (noise > groundLimit) {
                     colourMap[y * width + x] = groundColor;
+                } else if (noise > lightGroundLimit) {
+                    colourMap[y * width + x] = lightGroundColor;
                 } else if (noise > beachLimit) {
                     colourMap[y * width + x] = beachColor;
-                } else {
+                } else if (noise > lowOceanLimit) {
+                    colourMap[y * width + x] = lowOceanColor;
+                } else if (noise > oceanLimit) {
                     colourMap[y * width + x] = oceanColor;
+                } else {
+                    colourMap[y * width + x] = deepOceanColor;
                 }
                 
                 // You can add if-else clauses or other bits of logic to add
