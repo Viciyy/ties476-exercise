@@ -313,6 +313,7 @@ MonoBehaviour:
   groundColor: {r: 0.15040939, g: 0.3773585, b: 0.10145959, a: 1}
   mountainColor: {r: 0.3490566, g: 0.3490566, b: 0.3490566, a: 0}
   snowColor: {r: 1, g: 1, b: 1, a: 0}
+  cityColor: {r: 1, g: 0, b: 0, a: 0}
   mapWidth: 300
   mapHeight: 200
   offset: {x: 0, y: 0}
@@ -321,6 +322,11 @@ MonoBehaviour:
   persistence: 0.29
   lacunarity: 3
   seed: 0
+  cityNoiseScale: 16.1
+  cityOctaves: 5
+  cityPersistence: 0.295
+  cityLacunarity: 3
+  citySeed: 3
   oceanLimit: 0.24
   lowOceanLimit: 0.471
   beachLimit: 0.523
@@ -328,3 +334,4 @@ MonoBehaviour:
   groundLimit: 0.63
   mountainLimit: 0.718
   snowLimit: 0.804
+  cityLimit: 0.681
